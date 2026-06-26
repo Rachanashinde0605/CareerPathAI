@@ -21,7 +21,7 @@ function Dashboard() {
     e.preventDefault();
 
     const response = await fetch(
-      "http://localhost:8080/api/skills",
+        "https://careerpath-backend-szag.onrender.com/api/skills",
       {
         method: "POST",
         headers: {
@@ -33,7 +33,7 @@ function Dashboard() {
 
     if (response.ok) {
       const recommendation = await fetch(
-        `http://localhost:8080/api/recommend?skills=${data.skills}&interests=${data.interests}`
+        `https://careerpath-backend-szag.onrender.com/api/recommend?skills=${data.skills}&interests=${data.interests}`
       );
 
       const result = await recommendation.text();
