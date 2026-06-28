@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -29,7 +32,8 @@ function Login() {
 
     const data = await response.text();
     if (data === "Login Successful") {
-  window.location.href = "/dashboard";
+  navigate("/dashboard");
+
 } else {
   alert(data);
 }
@@ -67,9 +71,9 @@ function Login() {
           </button>
           <p className="mt-4 text-center">
   Don't have an account?
-  <a href="/register" className="text-blue-600 ml-1">
-    Register
-  </a>
+  <Link to="/register" className="text-blue-600 ml-1">
+  Register
+</Link>
 </p>
         </form>
       </div>

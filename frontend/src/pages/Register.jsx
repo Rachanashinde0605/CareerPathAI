@@ -1,6 +1,9 @@
 import { useState } from "react";
-
+import { useNavigate, Link } from "react-router-dom";
 function Register() {
+
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -30,7 +33,8 @@ function Register() {
 
     if (response.ok) {
   alert("Registration Successful!");
-  window.location.href = "/";
+  navigate("/");
+
 } else {
   alert("Registration Failed!");
 }
@@ -76,9 +80,9 @@ function Register() {
           </button>
           <p className="mt-4 text-center">
   Already have an account?
-  <a href="/" className="text-blue-600 ml-1">
-    Login
-  </a>
+  <Link to="/" className="text-blue-600 ml-1">
+  Login
+</Link>
 </p>
         </form>
       </div>
