@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = {
-    "https://your-frontend.onrender.com"
-})
+@CrossOrigin(origins = "*")
 public class UserController {
 
     private final UserRepository userRepository;

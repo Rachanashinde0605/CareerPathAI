@@ -21,7 +21,7 @@ function Dashboard() {
     e.preventDefault();
 
     const response = await fetch(
-        "https://careerpath-backend-szag.onrender.com/api/skills",
+        "https://careerpath-backend-sbob.onrender.com/api/skills",
       {
         method: "POST",
         headers: {
@@ -33,7 +33,7 @@ function Dashboard() {
 
     if (response.ok) {
       const recommendation = await fetch(
-        `https://careerpath-backend-szag.onrender.com/api/recommend?skills=${data.skills}&interests=${data.interests}`
+        `https://careerpath-backend-sbob.onrender.com/api/recommend?skills=${skills}&interests=${interests}`
       );
 
       const result = await recommendation.text();

@@ -18,7 +18,7 @@ function Register() {
     e.preventDefault();
 
     const response = await fetch(
-     "https://careerpath-backend-szag.onrender.com/api/register",
+     "https://careerpath-backend-sbob.onrender.com/api/register",
       {
         method: "POST",
         headers: {

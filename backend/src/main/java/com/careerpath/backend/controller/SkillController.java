@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/skills")
-@CrossOrigin(origins = {
-    "https://your-frontend.onrender.com"
-})
+@CrossOrigin(origins = "*")
 public class SkillController {
 
     private final SkillRepository skillRepository;

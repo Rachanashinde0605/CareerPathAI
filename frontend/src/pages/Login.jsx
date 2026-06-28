@@ -17,7 +17,7 @@ function Login() {
     e.preventDefault();
 
     const response = await fetch(
-      "https://careerpath-backend-szag.onrender.com/api/login",
+      "https://careerpath-backend-sbob.onrender.com/api/login",
       {
         method: "POST",
         headers: {
