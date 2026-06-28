@@ -33,8 +33,8 @@ function Dashboard() {
 
     if (response.ok) {
       const recommendation = await fetch(
-        `https://careerpath-backend-sbob.onrender.com/api/recommend?skills=${skills}&interests=${interests}`
-      );
+  `https://careerpath-backend-sbob.onrender.com/api/recommend?skills=${data.skills}&interests=${data.interests}`
+);
 
       const result = await recommendation.text();
 
